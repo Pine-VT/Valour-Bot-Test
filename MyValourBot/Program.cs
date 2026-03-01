@@ -6,7 +6,7 @@ var client = new ValourClient("https://api.valour.gg/");
 client.SetupHttpClient();
 
 // Initialize the bot user
-var loginResult = await client.InitializeUser("bot-8786d48e-a08b-43d6-8d0a-7c9a09423e3a");
+var loginResult = await client.InitializeUser("No bot token 4 u");
 if (!loginResult.Success)
 {
     Console.WriteLine($"Login failed: {loginResult.Message}");
@@ -43,3 +43,4 @@ client.MessageService.MessageReceived += async (message) =>
 
 Console.WriteLine("Listening for messages...");
 await Task.Delay(Timeout.Infinite);
+
