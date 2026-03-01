@@ -16,7 +16,7 @@ if (!loginResult.Success)
 Console.WriteLine($"Bot online: {client.Me.Name}");
 
 // Join a specific planet first
-await client.PlanetService.JoinPlanetAsync(42439954653511681, "k2tz9c4i");
+await client.PlanetService.JoinPlanetAsync(PlanetId, "PlanetCode");
 
 // Connect to all planets and channels (BotService helper)
 await client.BotService.JoinAllChannelsAsync();
@@ -43,4 +43,5 @@ client.MessageService.MessageReceived += async (message) =>
 
 Console.WriteLine("Listening for messages...");
 await Task.Delay(Timeout.Infinite);
+
 
